@@ -20,7 +20,7 @@ function Duotone(src, primaryClr, secondaryClr, actions = (ctx) => null) {
 	downloadedImg.crossOrigin = '';
 	downloadedImg.onload = function() {
 		ctx.drawImage(downloadedImg, 0, 0, canvas.width, canvas.height);
-		imageData = ctx.getImageData(0, 0, 800, 800);
+		const imageData = ctx.getImageData(0, 0, 800, 800);
 		const pixels = imageData.data;
 		for (let i = 0; i < pixels.length; i += 4) {
 			const red = pixels[i];

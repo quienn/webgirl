@@ -5,7 +5,7 @@
 	"source": "src/index.html",
 	"scripts": {
 		"start": "parcel",
-		"build": "parcel build"
+		"build": "parcel build --dist-dir www"
 	},
 	"devDependencies": {
 		"parcel": "^2.9.3"
