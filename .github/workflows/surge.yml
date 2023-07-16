@@ -1,6 +1,3 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Deploy to Surge
 
 on:
@@ -16,12 +13,16 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: pnpm/action-setup@v2
+      with:
+        version: 6.32.9
     - uses: actions/setup-node@v3
       with:
         node-version: '18'
         cache: 'pnpm'
-    - run: npm install -g surge
-    - run: pnpm install
-    - run: pnpm build
-    - run: surge ./dist/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
-    
+    - run: |
+        npm i -g surge
+        pnpm install
+        pnpm build
+        surge ./dist/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+      
+      
