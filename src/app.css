@@ -1,0 +1,25 @@
+:root {
+	--black: #111111;
+	--white: #FFFFFF;
+}
+
+* {
+	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+body {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+footer {
+	text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--black);
+		color: var(--white);
+	}
+}

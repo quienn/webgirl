@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Girl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/tv-girl.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>web girl</h1>
+
+      <p>
+        get your photos rocking the TV Girl vibe.
+      </p>
+
+      <p>
+        ⚠️ <b>note</b>: This website is still a <i>work in progress</i>. For bug reports and feedback, go to the <a href="https://github.com/quienn/webgirl">issue tracker</a>. ⚠️
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>settings</h2>
+
+        <form id="settings-form">
+          <fieldset>
+            <legend>image:</legend>
+
+            <input type="file" id="image-file" name="image" accept="image/png,image/jpeg" required />
+          </fieldset>
+          
+          <fieldset>
+            <legend>style:</legend>
+            
+            <input type="radio" id="lonely-style" name="style" required checked />
+            <label for="lonely-style">self-titled/lonely women</label>
+          </fieldset>
+
+          <br />
+          <button id="form-button" type="submit">generate</button>
+          <button id="download-button" hidden>download</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>results</h2>
+
+        <div id="results">
+          <p>
+            <i>I'm starting to suspect you don't intend to do anything you say at all...</i> (hint: <b>try adding a picture!</b>)
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <hr />
+    
+    <footer>
+      <p>
+        <i>
+          “From México with ❤️, <a href="https://quien.flounder.online">Martín</a>.”
+        </i>
+      </p>
+    </footer>
+    
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
